@@ -1,0 +1,10 @@
+#pragma once
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <fstream>
+#include "Token.h"
+#include "transFunctions.h"
+#include "HashTable.h"
+#include "dfa.h"
+#include <string>

@@ -1,0 +1,11 @@
+int Main(int s){
+int First,third,4th;
+float sEcOnD;
+First=12;
+sEcOnD=15.45;
+third=First+sEcOnD*First-sEcOnD;
+sEcOnD!=14;
+sEcOnD=third/First;
+123456789
+return 0;
+} 
