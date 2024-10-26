@@ -1,43 +1,45 @@
 #include "includes.h"
-
 using namespace std;
 class Lexer 
 {
+
 private:
 	HashTable Tokens;
-	void CreateToken(vector<char>& alphabet, string& s, ofstream& out)
+	void CreateToken(string& s, ofstream& out,dfa &KEY, dfa& KEY2, dfa& var,dfa& cons)
 	{
+		
 		if (s.size() != 0)
 		{
-			if (dfa(countStatesKeyWord, alphabet, finalStatesKeyWord, transitFunctionKeyWord).isAccept(s))
+			
+			if (KEY.isAccept(s))
 			{
 				Token token = Token(s, "KeyWord");
 				Tokens.add(token);
 				s.clear();
 				return;
 			}
-			else if (dfa(countStatesKeyWords, alphabet, finalStatesKeyWords, transitFunctionKeyWords).isAccept(s))
+			else if (KEY2.isAccept(s))
 			{
 				Token token = Token(s, "KeyWord");
 				Tokens.add(token);
 				s.clear();
 				return;
 			}
-			else if (dfa(countStatesVar, alphabet, finalStatesVar, transitFunctionVar).isAccept(s))
+			else if (var.isAccept(s))
 			{
 				Token token = Token(s, "VAR");
 				Tokens.add(token);
 				s.clear();
 				return;
 			}
-			else if (dfa(countStatesConst, alphabet, finalStatesConst, transitFunctionConst).isAccept(s))
+			else if (cons.isAccept(s))
 			{
 				Token token = Token(s, "CONST");
 				Tokens.add(token);
 				s.clear();
 				return;
 			}
-			out << "Íå óäàëîñü ðàñïîçíàòü ëåêñåìó: " << s << '\n';
+			out << "ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ñ€Ð°ÑÐ¿Ð¾Ð·Ð½Ð°Ñ‚ÑŒ Ð»ÐµÐºÑÐµÐ¼Ñƒ: " << s << '\n';
 			s.clear();
 		}
 	}
@@ -79,69 +81,74 @@ public:
 		alphabet.push_back('{');
 		alphabet.push_back('}');
 		alphabet.push_back('=');
+		dfa KEY = dfa(countStatesKeyWord, alphabet, finalStatesKeyWord, transitFunctionKeyWord);
+		dfa KEY2 = dfa(countStatesKeyWords, alphabet, finalStatesKeyWords, transitFunctionKeyWords);
+		dfa var = dfa(countStatesVar, alphabet, finalStatesVar, transitFunctionVar);
+		dfa cons = dfa(countStatesConst, alphabet, finalStatesConst, transitFunctionConst);
 		string alp = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.+-,;*/%(){}=\n";
 		char a;
 		string s;
 		ofstream out("errors.txt");
 		while (!inp.eof())
 		{
+			
 			inp.get(a);
 			if (a == ';')
 			{
-				CreateToken(alphabet, s, out);
+				CreateToken(s, out,KEY,KEY2,var,cons);
 				Token token = Token(";", "SEP");
 				Tokens.add(token);
 			}
 			else if (a == ',')
 			{
-				CreateToken(alphabet, s, out);
+				CreateToken(s, out, KEY, KEY2, var, cons);
 				Token token = Token(",", "SEP");
 				Tokens.add(token);
 			}
 			else if (a == '{')
 			{
-				CreateToken(alphabet, s, out);
+				CreateToken( s, out, KEY, KEY2, var, cons);
 				Token token = Token("{", "SEP");
 				Tokens.add(token);
 			}
 			else if (a == '}')
 			{
-				CreateToken(alphabet, s, out);
+				CreateToken(s, out, KEY, KEY2, var, cons);
 				Token token = Token("}", "SEP");
 				Tokens.add(token);
 
 			}
 			else if (a == '(')
 			{
-				CreateToken(alphabet, s, out);
+				CreateToken(s, out, KEY, KEY2, var, cons);
 				Token token = Token("(", "SEP");
 				Tokens.add(token);
 			}
 			else if (a == ')')
 			{
-				CreateToken(alphabet, s, out);
+				CreateToken(s, out, KEY, KEY2, var, cons);
 				Token token = Token(")", "SEP");
 				Tokens.add(token);
 			}
 			else if (a == ' ')
 			{
-				CreateToken(alphabet, s, out);
+				CreateToken( s, out, KEY, KEY2, var, cons);
 			}
 			else if (a == '+' || a == '-' || a == '*' || a == '%' || a=='=' || a=='/')
 			{
-				CreateToken(alphabet, s, out);
+				CreateToken(s, out, KEY, KEY2, var, cons);
 				string oper = "";
 				oper += a;
 				Token token = Token(oper, "OPER");
 				Tokens.add(token);
 			}
 			else if (!IsValidChar(a, alp)) {
-				CreateToken(alphabet, s, out);
-				out << "Íåîïðåäåë¸ííûé ñèìâîë: " <<a<<endl;
+				CreateToken(s, out, KEY, KEY2, var, cons);
+				out << "ÐÐµÐ¾Ð¿Ñ€ÐµÐ´ÐµÐ»Ñ‘Ð½Ð½Ñ‹Ð¹ ÑÐ¸Ð¼Ð²Ð¾Ð»: " <<a<<endl;
 			}
 			else if (a == '\n')
 			{
-				CreateToken(alphabet, s, out);
+				CreateToken(s, out, KEY, KEY2, var, cons);
 			}
 
 			else
