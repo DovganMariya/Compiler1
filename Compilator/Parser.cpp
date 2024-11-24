@@ -2,19 +2,6 @@
 #include "Parser.h"
 using namespace std;
 ofstream out("Tree_Parse.txt");
-void Parser::printTree(std::shared_ptr<Node> node, int depth) const {
-	if (!node) return;
-
-	out << std::string(depth * 2, ' ') << node->type;
-	if (!node->value.empty()) {
-		out << ": " << node->value;
-	}
-	out << std::endl;
-
-	for (const auto& child : node->children) {
-		printTree(child, depth + 1);
-	}
-}
 void Parser::getLexeme()
 {
 	if (i <= text.size()) {
@@ -84,7 +71,7 @@ void Parser::type()
 		i++;
 	}
 	else {
-		out << "Ñòðîêà" << ": " << stroka << " Îæèäàëîñü:" << "int or float" << "ïîëó÷åíî: " << text[i].getLexem() << endl;
+		out << "Ð¡Ñ‚Ñ€Ð¾ÐºÐ°" << ": " << stroka << " ÐžÐ¶Ð¸Ð´Ð°Ð»Ð¾ÑÑŒ:" << "int or float" << "Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¾: " << text[i].getLexem() << endl;
 	}
 }
 void Parser::ID()
@@ -93,7 +80,7 @@ void Parser::ID()
 		i++;
 	}
 	else {
-		out << "Ñòðîêà" << ": " << stroka << " Îæèäàëîñü:" << "VAR" << "ïîëó÷åíî: " << text[i].getLexemType() << endl;
+		out << "Ð¡Ñ‚Ñ€Ð¾ÐºÐ°" << ": " << stroka << " ÐžÐ¶Ð¸Ð´Ð°Ð»Ð¾ÑÑŒ:" << "VAR" << "Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¾: " << text[i].getLexemType() << endl;
 	}
 }
 void Parser::varlist()
@@ -179,13 +166,13 @@ void Parser::simpleExpr()
 		match2(")");
 	}
 	else {
-		out << "Ñòðîêà" << ": " << stroka << " Îæèäàëîñü:" << "identifier, constant, or expression" << "ïîëó÷åíî: " << text[i].getLexemType() << endl;
+		out << "Ð¡Ñ‚Ñ€Ð¾ÐºÐ°" << ": " << stroka << " ÐžÐ¶Ð¸Ð´Ð°Ð»Ð¾ÑÑŒ:" << "identifier, constant, or expression" << "Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¾: " << text[i].getLexemType() << endl;
 	}
 }
 void Parser::constant()
 {
 	if (text[i].getLexemType() != "CONST_INT" && text[i].getLexemType() != "CONST_DOUBLE") {
-		out << "Ñòðîêà" << ": " << stroka << " Îæèäàëîñü:" << "CONST" << "ïîëó÷åíî: " << text[i].getLexemType() << endl;
+		out << "Ð¡Ñ‚Ñ€Ð¾ÐºÐ°" << ": " << stroka << " ÐžÐ¶Ð¸Ð´Ð°Ð»Ð¾ÑÑŒ:" << "CONST" << "Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¾: " << text[i].getLexemType() << endl;
 	}
 	i++;
 }
@@ -204,7 +191,7 @@ void Parser::End()
 		i++;
 	}
 	if (text.size() > i+1) {
-		out << "Ñòðîêà" << ": " << stroka << " Îæèäàëîñü:" << "íè÷åãî " << "ïîëó÷åíî: " << text[i].getLexem() << endl;
+		out << "Ð¡Ñ‚Ñ€Ð¾ÐºÐ°" << ": " << stroka << " ÐžÐ¶Ð¸Ð´Ð°Ð»Ð¾ÑÑŒ:" << "Ð½Ð¸Ñ‡ÐµÐ³Ð¾ " << "Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¾: " << text[i].getLexem() << endl;
 	}
 }
 
@@ -214,7 +201,7 @@ void Parser::match(string s)
 		i++;
 	}
 	else {
-		out << "Ñòðîêà" << ": " << stroka << " Îæèäàëîñü:" << s  <<"ïîëó÷åíî: "<< text[i].getLexem() << endl;
+		out << "Ð¡Ñ‚Ñ€Ð¾ÐºÐ°" << ": " << stroka << " ÐžÐ¶Ð¸Ð´Ð°Ð»Ð¾ÑÑŒ:" << s  <<"Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¾: "<< text[i].getLexem() << endl;
 		i++;
 	}
 }
@@ -228,8 +215,9 @@ void Parser::match2(string s)
 		i++;
 	}
 	else {
-		out << "Ñòðîêà" << ": " << stroka << " Îæèäàëîñü:" << s << "ïîëó÷åíî: " << text[i].getLexem() << endl;
+		out << "Ð¡Ñ‚Ñ€Ð¾ÐºÐ°" << ": " << stroka << " ÐžÐ¶Ð¸Ð´Ð°Ð»Ð¾ÑÑŒ:" << s << "Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¾: " << text[i].getLexem() << endl;
 		i++;
 	}
 }
+
 
