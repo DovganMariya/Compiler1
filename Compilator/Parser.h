@@ -13,13 +13,11 @@ private:
 	struct Node {
 		string type;
 		string value;
-		vector<shared_ptr<Node>> children;
-		void addChild(shared_ptr<Node>  child) {
+		vector<Node*> children;
+		void addChild(Node*  child) {
 			children.push_back(child);
 		}
 	};
-	shared_ptr<Node> root;
-
 	vector<Token> text;
 	string input;
 	Token lexeme;
@@ -45,8 +43,7 @@ private:
 public:
 
 	Parser(vector<Token> tok);
-	shared_ptr<Node> parse();
-	void printTree(std::shared_ptr<Node> node, int depth = 0) const;
+	void parse();
 	~Parser() {
 //		delete[] ;
 	}
