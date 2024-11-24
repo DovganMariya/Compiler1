@@ -1,11 +1,6 @@
-int Main(int s){
-int First,third,4th;
-float sEcOnD;
-First=12;
-sEcOnD=15.45;
-third=First+sEcOnD*First-sEcOnD;
-sEcOnD!=14;
-sEcOnD=third/First;
-123456789
+int Main(){
+int First;
+First=0;
+a=b%0;
 return 0;
 } 

@@ -131,7 +131,9 @@
     <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Parser.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Source1.cpp" />
     <ClCompile Include="Token.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +141,7 @@
     <ClInclude Include="HashTable.h" />
     <ClInclude Include="includes.h" />
     <ClInclude Include="Lexer.h" />
+    <ClInclude Include="Parser.h" />
     <ClInclude Include="Token.h" />
     <ClInclude Include="transFunctions.h" />
   </ItemGroup>
@@ -146,6 +149,8 @@
     <Text Include="errors.txt" />
     <Text Include="input.txt" />
     <Text Include="output.txt" />
+    <Text Include="tokens.txt" />
+    <Text Include="Tree_Parse.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

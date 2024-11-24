@@ -2,6 +2,7 @@
 #include <string>
 class Token
 {
+
 private:
 
 	std::string token_name;
