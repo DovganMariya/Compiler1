@@ -1,0 +1,14 @@
+H:\SampleStrategy\SampleStrategy\bin\Debug\net8.0\SampleStrategy.exe
+H:\SampleStrategy\SampleStrategy\bin\Debug\net8.0\SampleStrategy.deps.json
+H:\SampleStrategy\SampleStrategy\bin\Debug\net8.0\SampleStrategy.runtimeconfig.json
+H:\SampleStrategy\SampleStrategy\bin\Debug\net8.0\SampleStrategy.dll
+H:\SampleStrategy\SampleStrategy\bin\Debug\net8.0\SampleStrategy.pdb
+H:\SampleStrategy\SampleStrategy\obj\Debug\net8.0\SampleStrategy.GeneratedMSBuildEditorConfig.editorconfig
+H:\SampleStrategy\SampleStrategy\obj\Debug\net8.0\SampleStrategy.AssemblyInfoInputs.cache
+H:\SampleStrategy\SampleStrategy\obj\Debug\net8.0\SampleStrategy.AssemblyInfo.cs
+H:\SampleStrategy\SampleStrategy\obj\Debug\net8.0\SampleStrategy.csproj.CoreCompileInputs.cache
+H:\SampleStrategy\SampleStrategy\obj\Debug\net8.0\SampleStrategy.dll
+H:\SampleStrategy\SampleStrategy\obj\Debug\net8.0\refint\SampleStrategy.dll
+H:\SampleStrategy\SampleStrategy\obj\Debug\net8.0\SampleStrategy.pdb
+H:\SampleStrategy\SampleStrategy\obj\Debug\net8.0\SampleStrategy.genruntimeconfig.cache
+H:\SampleStrategy\SampleStrategy\obj\Debug\net8.0\ref\SampleStrategy.dll
