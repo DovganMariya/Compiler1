@@ -1,0 +1,14 @@
+H:\SampleObsever\SampleObsever\bin\Debug\net8.0\SampleObsever.exe
+H:\SampleObsever\SampleObsever\bin\Debug\net8.0\SampleObsever.deps.json
+H:\SampleObsever\SampleObsever\bin\Debug\net8.0\SampleObsever.runtimeconfig.json
+H:\SampleObsever\SampleObsever\bin\Debug\net8.0\SampleObsever.dll
+H:\SampleObsever\SampleObsever\bin\Debug\net8.0\SampleObsever.pdb
+H:\SampleObsever\SampleObsever\obj\Debug\net8.0\SampleObsever.GeneratedMSBuildEditorConfig.editorconfig
+H:\SampleObsever\SampleObsever\obj\Debug\net8.0\SampleObsever.AssemblyInfoInputs.cache
+H:\SampleObsever\SampleObsever\obj\Debug\net8.0\SampleObsever.AssemblyInfo.cs
+H:\SampleObsever\SampleObsever\obj\Debug\net8.0\SampleObsever.csproj.CoreCompileInputs.cache
+H:\SampleObsever\SampleObsever\obj\Debug\net8.0\SampleObsever.dll
+H:\SampleObsever\SampleObsever\obj\Debug\net8.0\refint\SampleObsever.dll
+H:\SampleObsever\SampleObsever\obj\Debug\net8.0\SampleObsever.pdb
+H:\SampleObsever\SampleObsever\obj\Debug\net8.0\SampleObsever.genruntimeconfig.cache
+H:\SampleObsever\SampleObsever\obj\Debug\net8.0\ref\SampleObsever.dll
