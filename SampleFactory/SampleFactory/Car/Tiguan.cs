@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SampleFactory.Factory;
+using SampleFactory.Parts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +12,10 @@ namespace SampleFactory.Car
     {
         private string _name;
         private string _body;
-        private string _engine = "Gasoline";
-        private string _wheels = "\"14";
-        public Tiguan()
+        private IEngine _engine = "Gasoline";
+        private IWheels _wheels = "\"14";
+        private ICarPartsFactory _partsFactory;
+        public Tiguan(ICarPartsFactory _partsFactory)
         {
             _name = "Tiguan";
             _body = "Crossover";
@@ -25,12 +28,12 @@ namespace SampleFactory.Car
 
         public void AssemblyEngine()
         {
-            Console.WriteLine("Установка двигатель{0}", _engine);
+            _engine = _partsFactory.GetEngine();
         }
 
         public void AssemblyWheels()
         {
-            Console.WriteLine("Установка колес{0}", _wheels);
+            _wheels = _partsFactory.GetWheels();
         }
 
         public string GetName()

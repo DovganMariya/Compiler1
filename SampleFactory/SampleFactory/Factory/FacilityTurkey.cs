@@ -11,7 +11,7 @@ namespace SampleFactory.Factory
     {
         protected override ICar GetCar()
         {
-            return new Tiguan();
+            return new Golf(new CarPartsFactoryChina());
         }
     }
 }
