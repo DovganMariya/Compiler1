@@ -1,4 +1,4 @@
-﻿using SampleFactory.Parts;
+﻿using SampleFactory.Factory.Parts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +10,7 @@ namespace SampleFactory.Factory
     public interface ICarPartsFactory
     {
         IEngine GetEngine();
+
         IWheels GetWheels();
     }
 }

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFactory.Parts
+namespace SampleFactory.Factory.Parts
 {
     public class DieselEngine : IEngine
     {
         public DieselEngine()
         {
-            Console.WriteLine("Установка дизельного двигателя");
+            Console.WriteLine("Установка дизильного двигателя");
         }
     }
 }

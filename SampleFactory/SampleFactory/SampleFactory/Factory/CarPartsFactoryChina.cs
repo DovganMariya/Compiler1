@@ -1,4 +1,4 @@
-﻿using SampleFactory.Parts;
+﻿using SampleFactory.Factory.Parts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +9,14 @@ namespace SampleFactory.Factory
 {
     public class CarPartsFactoryChina : ICarPartsFactory
     {
-       public IEngine GetEngine()
+        public IEngine GetEngine()
         {
             return new GasolineEngine();
         }
-       public IEngine GetEngine()
+
+        public IWheels GetWheels()
         {
             return new HighwayWheels();
         }
-
     }
 }

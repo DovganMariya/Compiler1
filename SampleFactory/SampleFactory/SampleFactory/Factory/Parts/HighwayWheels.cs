@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleFactory.Parts
+namespace SampleFactory.Factory.Parts
 {
     public class HighwayWheels : IWheels
     {
         public HighwayWheels()
         {
-            Console.WriteLine("Установка колес радиуса 17");
+            Console.WriteLine("Установка колес \"17 радиуса");
         }
-
     }
 }
