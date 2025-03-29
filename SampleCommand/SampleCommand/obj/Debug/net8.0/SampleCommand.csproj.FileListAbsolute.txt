@@ -1,0 +1,14 @@
+C:\Users\First7\Documents\SampleCommand\SampleCommand\bin\Debug\net8.0\SampleCommand.exe
+C:\Users\First7\Documents\SampleCommand\SampleCommand\bin\Debug\net8.0\SampleCommand.deps.json
+C:\Users\First7\Documents\SampleCommand\SampleCommand\bin\Debug\net8.0\SampleCommand.runtimeconfig.json
+C:\Users\First7\Documents\SampleCommand\SampleCommand\bin\Debug\net8.0\SampleCommand.dll
+C:\Users\First7\Documents\SampleCommand\SampleCommand\bin\Debug\net8.0\SampleCommand.pdb
+C:\Users\First7\Documents\SampleCommand\SampleCommand\obj\Debug\net8.0\SampleCommand.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\First7\Documents\SampleCommand\SampleCommand\obj\Debug\net8.0\SampleCommand.AssemblyInfoInputs.cache
+C:\Users\First7\Documents\SampleCommand\SampleCommand\obj\Debug\net8.0\SampleCommand.AssemblyInfo.cs
+C:\Users\First7\Documents\SampleCommand\SampleCommand\obj\Debug\net8.0\SampleCommand.csproj.CoreCompileInputs.cache
+C:\Users\First7\Documents\SampleCommand\SampleCommand\obj\Debug\net8.0\SampleCommand.dll
+C:\Users\First7\Documents\SampleCommand\SampleCommand\obj\Debug\net8.0\refint\SampleCommand.dll
+C:\Users\First7\Documents\SampleCommand\SampleCommand\obj\Debug\net8.0\SampleCommand.pdb
+C:\Users\First7\Documents\SampleCommand\SampleCommand\obj\Debug\net8.0\SampleCommand.genruntimeconfig.cache
+C:\Users\First7\Documents\SampleCommand\SampleCommand\obj\Debug\net8.0\ref\SampleCommand.dll
